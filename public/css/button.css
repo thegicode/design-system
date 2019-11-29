@@ -1,0 +1,35 @@
+@charset "UTF-8";
+:root {
+  —black: #222222;
+  —g0: #444444;
+  —g1: #888888;
+  —g2: #bbbbbb;
+  —g3: #d7d7d7;
+  —g4: #e6e6e6;
+  —g5: #f6f6f6;
+  —mint: #2ac1bc;
+  —pink: #ed0f89;
+  —red: #f45452;
+  —orange: #ff8400;
+  —gold: #c9a579;
+  —red19: #ef0000;
+  —yellow: #ffc600;
+  —green: #0c952a;
+  —lightgreen: #1ad042;
+}
+
+.button {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 25px;
+  border: solid 1px var(—g3);
+  background-color: #fff;
+}
+
+.button .__text {
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: -0.35px;
+  text-align: center;
+  color: #222;
+}

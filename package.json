@@ -1,0 +1,25 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thegicode/design-system.git"
+  },
+  "author": "thegi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thegicode/design-system/issues"
+  },
+  "homepage": "https://github.com/thegicode/design-system#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass --watch --output-style expanded public/sass --output public/css",
+    "build:sass": "node-sass --output-style compressed public/sass --output build/css --source-map false"
+  },
+  "devDependencies": {}
+}
