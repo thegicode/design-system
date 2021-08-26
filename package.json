@@ -13,13 +13,13 @@
     "url": "https://github.com/thegicode/design-system/issues"
   },
   "homepage": "https://github.com/thegicode/design-system#readme",
-  "dependencies": {
-    "node-sass": "^4.13.0"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass --watch --output-style expanded dev/sass --output dev/css",
     "css:build": "node-sass --output-style compressed dev/sass --output build/css --source-map false"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
 }
