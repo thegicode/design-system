@@ -18,8 +18,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass --watch --output-style expanded public/sass --output public/css",
-    "build:sass": "node-sass --output-style compressed public/sass --output build/css --source-map false"
+    "css": "node-sass --watch --output-style expanded dev/sass --output dev/css",
+    "css:build": "node-sass --output-style compressed dev/sass --output build/css --source-map false"
   },
   "devDependencies": {}
 }
