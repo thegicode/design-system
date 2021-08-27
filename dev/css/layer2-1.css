@@ -1,0 +1,43 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.root {
+  display: flex;
+  height: 200px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  border: solid 1px red;
+}
+
+.gnb {
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 255, 0, 0.1);
+  background-color: rgba(0, 255, 0, 0.05);
+  white-space: nowrap;
+}
+
+.contetns {
+  flex: 1;
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.root1 .gnb {
+  flex-basis: 100px;
+}
+
+.root2 .gnb {
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.root3 .gnb {
+  flex: none;
+  width: 100px;
+}
