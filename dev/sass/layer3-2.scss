@@ -1,0 +1,46 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrap {
+    display: flex;
+    height: 100%;
+}
+
+.gnb {
+    overflow-y: auto;
+    flex: none;
+    width: 15%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 1px rgba(255, 0, 0, 0.1);
+    background-color: rgba(255, 0, 0, 0.05);
+}
+.container {
+    overflow-y: auto;
+    flex: 1;
+    height: 100%;
+
+    // For children
+    display: flex;
+    flex-direction: column;
+}
+
+.lnb {
+    flex: none;
+    height: 50px;
+    box-sizing: border-box;
+    border: solid 1px rgba(0, 255, 0, 0.1);
+    background-color: rgba(0, 255, 0, 0.05);
+}
+.contetns {
+    flex: 1;
+    box-sizing: border-box;
+    border: solid 1px rgba(0, 0, 255, 0.1);
+    background-color: rgba(0, 0, 255, 0.1);
+}
