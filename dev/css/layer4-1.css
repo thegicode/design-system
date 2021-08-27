@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.gnb {
+  height: 50px;
+  box-sizing: border-box;
+  border: solid 1px rgba(255, 0, 0, 0.1);
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.lnb {
+  height: 50px;
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 255, 0, 0.1);
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+.contetns {
+  flex: 1;
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.fnb {
+  height: 50px;
+  box-sizing: border-box;
+  border: solid 1px rgba(255, 0, 0, 0.1);
+  background-color: rgba(255, 0, 0, 0.05);
+}
