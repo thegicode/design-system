@@ -1,12 +1,12 @@
 # Design-system
 
-# Table of contents
+## Table of contents
 
-## List
+### List
 
 -   [list](https://thegicode.github.io/design-system/dev/html/list.html)
 
-## Layer
+### Layer
 
 -   [layer2-1](https://thegicode.github.io/design-system/dev/html/layer/layer2-1.html)
 -   [layer3-1](https://thegicode.github.io/design-system/dev/html/layer/layer3-1.html)
@@ -22,7 +22,7 @@
 -   [layer5-3](https://thegicode.github.io/design-system/dev/html/layer/layer5-3.html)
 -   [layer5-4](https://thegicode.github.io/design-system/dev/html/layer/layer5-4.html)
 
-# TODO
+## TODO
 
 -   vh
 -   dart-sass
