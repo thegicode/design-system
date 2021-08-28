@@ -1,8 +1,8 @@
-# design-system
+# Design-system
 
 # Table of contents
 
-## list
+## List
 
 -   [list](https://thegicode.github.io/design-system/dev/html/list.html)
 
