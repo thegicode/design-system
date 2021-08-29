@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Layer transform</title>
+    <link rel="stylesheet" type="text/css" href="../../css/animation/layer.css" />
+</head>
+
+<body>
+    <div class="root">
+        <p>Contents</p>
+        <button type="button" id="showButton">Show Panel</button>
+    </div>
+    <div id="panel" class="panel" aria-hidden="true">
+        <p>Panel</p>
+        <button type="button" id="closeButton">Hide Panel</button>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+
+    const showPanel = isShow => {
+        document.querySelector('#panel')
+            .setAttribute('aria-hidden', !isShow);
+    };
+
+    document.querySelector('#showButton')
+        .addEventListener('click', () => {
+            showPanel(true);
+        });
+
+    document.querySelector('#closeButton')
+        .addEventListener('click', () => {
+            showPanel(false);
+        });
+
+</script>
