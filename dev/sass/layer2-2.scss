@@ -3,13 +3,16 @@ html {
 }
 
 body {
+    display: flex;
     height: 100%;
+    margin: 0;
 }
 
 .root {
     display: flex;
-    height: 200px;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    width: 200px;
+    margin-right: 1rem;
     box-sizing: border-box;
     border: solid 1px rgba(255, 0, 0, 1);
 }
@@ -17,7 +20,6 @@ body {
     box-sizing: border-box;
     border: solid 1px rgba(0, 255, 0, 0.1);
     background-color: rgba(0, 255, 0, 0.05);
-    white-space: nowrap;
 }
 .contents {
     flex: 1;
@@ -33,18 +35,18 @@ body {
 }
 .root2 {
     .gnb {
-        width: 100px;
+        height: 100px;
     }
 }
 .root3 {
     .gnb {
         flex-shrink: 0;
-        width: 100px;
+        height: 100px;
     }
 }
 .root4 {
     .gnb {
         flex: none;
-        width: 100px;
+        height: 100px;
     }
 }
