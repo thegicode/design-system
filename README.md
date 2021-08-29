@@ -9,6 +9,7 @@
 ### Layer
 
 -   [layer2-1](https://thegicode.github.io/design-system/dev/html/layer/layer2-1.html)
+-   [layer2-2](https://thegicode.github.io/design-system/dev/html/layer/layer2-2.html)
 -   [layer3-1](https://thegicode.github.io/design-system/dev/html/layer/layer3-1.html)
 -   [layer3-2](https://thegicode.github.io/design-system/dev/html/layer/layer3-2.html)
 -   [layer4-1](https://thegicode.github.io/design-system/dev/html/layer/layer4-1.html)
