@@ -3,24 +3,40 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Buttons</title>
     <link rel="stylesheet" type="text/css" href="../css/button.css" />
-    <title>Button</title>
 </head>
 <body>
 
-    <div class="wrap">
+    <section>
+        <h3>Button</h3>
+        <button type="button" class="button">
+            <span class="__text">글쓰기</span>
+        </button>
 
-        <header>
-            <h1>Button Component</h1>
-        </header>
+        <button type="button" class="button">
+            <span class="__text">확인</span>
+        </button>
 
-        <main class="contents">
-            <button type="button" class="button">
-                <span class="__text">리뷰 쓰기</span>
-            </button>
-        </main>
+        <button type="button" class="button">
+            <span class="__text">수정</span>
+        </button>
 
-    </div>
+        <button type="button" class="button" disabled>
+            <span class="__text">삭제</span>
+        </button>
+    </section>
+
+    <section>
+        <h3>Checkbox</h3>
+
+        <label class="checks">
+            <input type="checkbox" name="">
+            <span class="__text">Checkbox</span>
+        </label>
+
+    </section>
+
     
 </body>
 </html>
