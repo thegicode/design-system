@@ -1,50 +1,117 @@
 body {
-  margin: 1rem;
+  margin: 2 rem;
 }
 
-.button {
+section {
+  margin: 1rem 0 2rem;
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+h3 {
+  margin: 2rem 0 1rem;
+}
+
+.buttons .button {
+  display: inline-block;
+  min-width: 70px;
+  height: 36px;
   box-sizing: border-box;
   padding: 5px 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 255, 0.1);
-  background-color: rgba(0, 0, 255, 0.05);
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-size: 14px;
+  font-weight: 500;
   white-space: nowrap;
+}
+
+.buttons .button:enabled {
+  border-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.05);
+  color: black;
   cursor: pointer;
 }
 
-.button:enabled:hover {
+.buttons .button:enabled:hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
 }
 
-.button:enabled:active {
+.buttons .button:enabled:active {
   border-color: rgba(0, 0, 255, 0.2);
   background-color: rgba(0, 0, 255, 0.15);
 }
 
-.checks .__text {
-  box-sizing: border-box;
-  padding: 3px 15px 7px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  white-space: nowrap;
+.buttons .button:disabled {
+  border-color: rgba(0, 0, 255, 0.05);
+  background-color: rgba(0, 0, 255, 0.02);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.buttons a.button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.buttons a.button[aria-disabled="true"] {
+  border-color: rgba(0, 0, 255, 0.05);
+  background-color: rgba(0, 0, 255, 0.02);
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.buttons a.button:not([aria-disabled="true"]) {
+  border-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.05);
+  color: black;
   cursor: pointer;
+}
+
+.buttons a.button:not([aria-disabled="true"]):hover {
+  border-color: rgba(0, 0, 255, 0.15);
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.buttons a.button:not([aria-disabled="true"]):active {
+  border-color: rgba(0, 0, 255, 0.2);
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
+.checkboxes .__text {
+  display: inline-block;
+  min-width: 70px;
+  height: 36px;
+  box-sizing: border-box;
+  padding: 6px 15px;
+  border-radius: 4px;
+  border: 1px solid transparent;
   border-color: rgba(0, 0, 0, 0.05);
   background-color: rgba(0, 0, 0, 0.05);
+  font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
 }
 
-.checks input[type="checkbox"] {
-  position: fixed;
-  top: -200000rem;
+.checkboxes input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 
-.checks input[type="checkbox"]:checked + .__text {
+.checkboxes input[type="checkbox"]:checked + .__text {
   border-color: rgba(155, 59, 167, 0.9);
   background-color: rgba(155, 59, 167, 0.8);
   color: rgba(255, 255, 255, 0.9);
 }
 
-.checks input[type="checkbox"]:focus-visible + .__text {
+.checkboxes input[type="checkbox"]:focus-visible + .__text {
   outline: solid 2px black;
 }

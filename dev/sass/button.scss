@@ -1,49 +1,109 @@
 body {
-    margin: 1rem;
+    margin: 2 rem;
 }
 
-.button {
+section {
+    margin: 1rem 0 2rem;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin: 2rem 0 1rem;
+}
+
+.buttons {
     @function color($opacity) {
         @return rgba(0, 0, 255, $opacity);
     }
-    box-sizing: border-box;
-    padding: 5px 20px;
-    border-radius: 10px;
-    border: 1px solid color(0.1);
-    background-color: color(0.05);
-    white-space: nowrap;
-    cursor: pointer;
-    &:enabled:hover {
-        border-color: color(0.15);
-        background-color: color(0.1);
+    @function fontColor($opacity) {
+        @return rgba(0, 0, 0, $opacity);
     }
-    &:enabled:active {
-        border-color: color(0.2);
-        background-color: color(0.15);
+    @mixin enabled {
+        border-color: color(0.1);
+        background-color: color(0.05);
+        color: fontColor(1);
+        cursor: pointer;
+        &:hover {
+            border-color: color(0.15);
+            background-color: color(0.1);
+        }
+        &:active {
+            border-color: color(0.2);
+            background-color: color(0.15);
+        }
+    }
+    @mixin disabled {
+        border-color: color(0.05);
+        background-color: color(0.02);
+        color: fontColor(0.3);
+    }
+    .button {
+        display: inline-block;
+        min-width: 70px;
+        height: 36px;
+        box-sizing: border-box;
+        padding: 5px 20px;
+        border-radius: 4px;
+        border: solid 1px transparent;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        &:enabled {
+            @include enabled;
+        }
+        &:disabled {
+            @include disabled;
+        }
+    }
+    a.button {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        text-decoration: none;
+        &[aria-disabled="true"] {
+            @include disabled;
+            pointer-events: none;
+        }
+        &:not([aria-disabled="true"]) {
+            @include enabled;
+        }
     }
 }
 
-.checks {
+.checkboxes {
     @function color1($opacity) {
         @return rgba(155, 59, 167, $opacity);
     }
     @function color2($opacity) {
         @return rgba(0, 0, 0, $opacity);
     }
+    .label {
+    }
     .__text {
+        display: inline-block;
+        min-width: 70px;
+        height: 36px;
         box-sizing: border-box;
-        padding: 3px 15px 7px;
-        border-radius: 10px;
+        padding: 6px 15px;
+        border-radius: 4px;
         border: 1px solid transparent;
-        white-space: nowrap;
-        cursor: pointer;
         border-color: color2(0.05);
         background-color: color2(0.05);
+        font-size: 14px;
         color: color2(0.5);
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
     }
     input[type="checkbox"] {
-        position: fixed;
-        top: -200000rem;
+        position: absolute;
+        top: 0;
+        opacity: 0;
         &:checked + .__text {
             border-color: color1(0.9);
             background-color: color1(0.8);
