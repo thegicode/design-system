@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Button
+
+-   [Button](https://thegicode.github.io/design-system/dev/html/button.html)
+
 ### List
 
 -   [list](https://thegicode.github.io/design-system/dev/html/list.html)
