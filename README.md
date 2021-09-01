@@ -34,3 +34,5 @@
 -   button
 -   aria
 -   font
+-   vertical middle
+-   css prefix

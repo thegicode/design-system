@@ -1,33 +1,63 @@
-body {
-    margin: 2 rem;
+@function color($opacity) {
+    @return rgba(0, 0, 255, $opacity);
+}
+@function fontColor($opacity) {
+    @return rgba(0, 0, 0, $opacity);
 }
 
-section {
-    margin: 1rem 0 2rem;
-    padding: 2rem;
-    border-radius: 4px;
-    border: 1px solid #ddd;
+body {
+    margin: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 500;
 }
 
 h2 {
     margin-top: 0;
+    font-weight: 500;
+    color: #333;
 }
 
 h3 {
-    margin: 2rem 0 1rem;
+    margin: 0 0 1rem;
+    font-weight: 500;
+    color: #333;
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 5px;
+        margin-right: 7px;
+        margin-top: -1px;
+        background-color: rgba(124, 252, 0, 0.5);
+        background-image: -webkit-linear-gradient(
+            top,
+            rgba(124, 252, 0, 1) 10%,
+            rgba(124, 252, 0, 0) 70%
+        );
+        vertical-align: middle;
+    }
+}
+
+section {
+    margin: 1rem 0 3rem;
+}
+
+.elements {
+    margin: 0.625rem 0;
+    padding: 1.25rem;
+    border: solid 1px #ccc;
+    border-radius: 4.2px;
+    background-clip: padding-box;
 }
 
 .buttons {
-    @function color($opacity) {
-        @return rgba(0, 0, 255, $opacity);
-    }
-    @function fontColor($opacity) {
-        @return rgba(0, 0, 0, $opacity);
-    }
     @mixin enabled {
         border-color: color(0.1);
         background-color: color(0.05);
-        color: fontColor(1);
+        color: fontColor(0.9);
         cursor: pointer;
         &:hover {
             border-color: color(0.15);
@@ -43,12 +73,13 @@ h3 {
         background-color: color(0.02);
         color: fontColor(0.3);
     }
+
     .button {
         display: inline-block;
         min-width: 70px;
-        height: 36px;
+        min-height: 36px;
         box-sizing: border-box;
-        padding: 5px 20px;
+        padding: 5px 20px 7px;
         border-radius: 4px;
         border: solid 1px transparent;
         font-size: 14px;
@@ -60,6 +91,10 @@ h3 {
         &:disabled {
             @include disabled;
         }
+
+        // for display
+        margin-bottom: 5px;
+        vertical-align: top;
     }
     a.button {
         padding-top: 7px;
@@ -75,42 +110,56 @@ h3 {
     }
 }
 
-.checkboxes {
-    @function color1($opacity) {
+.togglable {
+    @function checkedColor($opacity) {
         @return rgba(155, 59, 167, $opacity);
     }
-    @function color2($opacity) {
-        @return rgba(0, 0, 0, $opacity);
-    }
-    .label {
-    }
+
     .__text {
         display: inline-block;
         min-width: 70px;
-        height: 36px;
+        min-height: 36px;
         box-sizing: border-box;
-        padding: 6px 15px;
+        padding: 8px 15px 9px;
         border-radius: 4px;
         border: 1px solid transparent;
-        border-color: color2(0.05);
-        background-color: color2(0.05);
+        border-color: color(0.1);
+        background-color: color(0.05);
         font-size: 14px;
-        color: color2(0.5);
+        color: fontColor(0.9);
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
+
+        // for display
+        margin-bottom: 5px;
+        vertical-align: top;
     }
-    input[type="checkbox"] {
+    input[type="checkbox"],
+    input[type="radio"] {
         position: absolute;
         top: 0;
         opacity: 0;
         &:checked + .__text {
-            border-color: color1(0.9);
-            background-color: color1(0.8);
+            border-color: checkedColor(0.9);
+            background-color: checkedColor(0.8);
             color: rgba(255, 255, 255, 0.9);
         }
         &:focus-visible + .__text {
             outline: solid 2px black;
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1024px;
+        margin: 2rem auto;
     }
 }

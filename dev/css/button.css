@@ -1,39 +1,67 @@
 body {
-  margin: 2 rem;
+  margin: 1rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-section {
-  margin: 1rem 0 2rem;
-  padding: 2rem;
-  border-radius: 4px;
-  border: 1px solid #ddd;
+h1 {
+  font-weight: 500;
 }
 
 h2 {
   margin-top: 0;
+  font-weight: 500;
+  color: #333;
 }
 
 h3 {
-  margin: 2rem 0 1rem;
+  margin: 0 0 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+h3:before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  margin-right: 7px;
+  margin-top: -1px;
+  background-color: rgba(124, 252, 0, 0.5);
+  background-image: -webkit-linear-gradient(top, lawngreen 10%, rgba(124, 252, 0, 0) 70%);
+  vertical-align: middle;
+}
+
+section {
+  margin: 1rem 0 3rem;
+}
+
+.elements {
+  margin: 0.625rem 0;
+  padding: 1.25rem;
+  border: solid 1px #ccc;
+  border-radius: 4.2px;
+  background-clip: padding-box;
 }
 
 .buttons .button {
   display: inline-block;
   min-width: 70px;
-  height: 36px;
+  min-height: 36px;
   box-sizing: border-box;
-  padding: 5px 20px;
+  padding: 5px 20px 7px;
   border-radius: 4px;
   border: solid 1px transparent;
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
+  margin-bottom: 5px;
+  vertical-align: top;
 }
 
 .buttons .button:enabled {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
-  color: black;
+  color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
@@ -69,7 +97,7 @@ h3 {
 .buttons a.button:not([aria-disabled="true"]) {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
-  color: black;
+  color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
@@ -83,35 +111,53 @@ h3 {
   background-color: rgba(0, 0, 255, 0.15);
 }
 
-.checkboxes .__text {
+.togglable .__text {
   display: inline-block;
   min-width: 70px;
-  height: 36px;
+  min-height: 36px;
   box-sizing: border-box;
-  padding: 6px 15px;
+  padding: 8px 15px 9px;
   border-radius: 4px;
   border: 1px solid transparent;
-  border-color: rgba(0, 0, 0, 0.05);
-  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.05);
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.9);
   white-space: nowrap;
   user-select: none;
   cursor: pointer;
+  margin-bottom: 5px;
+  vertical-align: top;
 }
 
-.checkboxes input[type="checkbox"] {
+.togglable input[type="checkbox"],
+.togglable input[type="radio"] {
   position: absolute;
   top: 0;
   opacity: 0;
 }
 
-.checkboxes input[type="checkbox"]:checked + .__text {
+.togglable input[type="checkbox"]:checked + .__text,
+.togglable input[type="radio"]:checked + .__text {
   border-color: rgba(155, 59, 167, 0.9);
   background-color: rgba(155, 59, 167, 0.8);
   color: rgba(255, 255, 255, 0.9);
 }
 
-.checkboxes input[type="checkbox"]:focus-visible + .__text {
+.togglable input[type="checkbox"]:focus-visible + .__text,
+.togglable input[type="radio"]:focus-visible + .__text {
   outline: solid 2px black;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1024px;
+    margin: 2rem auto;
+  }
 }

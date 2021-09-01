@@ -10,44 +10,95 @@
     <h1>Buttons</h1>
 
     <section class="buttons">
-        <h2>Buttons</h2>
+        <h2>Type</h2>
 
-        <h3>Button element</h3>
-        <button type="button" class="button">
-            <span class="__text">글쓰기</span>
-        </button>
 
-        <button type="button" class="button">
-            <span class="__text">확인</span>
-        </button>
+        <section class="elements">
+            <h3>Button</h3>
 
-        <button type="button" class="button">
-            <span class="__text">수정</span>
-        </button>
+            <button type="button" class="button">
+                <span class="__text">Button</span>
+            </button>
+            <button type="button" class="button">
+                <span class="__text">확인</span>
+            </button>
+            <button type="button" class="button" disabled>
+                <span class="__text">Disabled</span>
+            </button>
 
-        <button type="button" class="button" disabled>
-            <span class="__text">삭제</span>
-        </button>
+            <button type="submit" class="button">
+                <span class="__text">Submit</span>
+            </button>
+            <button type="reset" class="button">
+                <span class="__text">Reset</span>
+            </button>
 
-        <h3>A element</h3>
-        <a href="#" role="button" class="button">확인</a>
-        <a href="#" role="button" class="button" aria-disabled="true">삭제</a>
-        
+            <button type="button" class="button">
+                <span class="__text">Button <br>second line</span>
+            </button>
+            <button type="button" class="button">
+                <span class="__text">버튼 <br>두 번째 라인</span>
+            </button>
+
+        </section>
+
+        <section class="elements">
+            <h3>A</h3>
+            <a href="#" role="button" class="button">A Link</a>
+            <a href="#" role="button" class="button">확인</a>
+            <a href="#" role="button" class="button" aria-disabled="true">Disabled</a>
+        </section>
+
     </section>
 
-    
+    <section class="togglable">
+        <h2>Togglable</h2>
 
-    <section class="checkboxes">
-        <h2>Checkbox</h2>
+        <section class="elements">
+            <h3>Checkbox</h3>
+            <label class="checkbox-label">
+                <input type="checkbox" name="someName1">
+                <span class="__text">Checkbox</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="someName1">
+                <span class="__text">체크박스</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="someName1">
+                <span class="__text">Checkbox <br> second line</span>
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="someName1">
+                <span class="__text">체크박스 <br> 두번째 라인</span>
+            </label>
+        </section>
 
-        <label class="label">
-            <input type="checkbox" name="someName">
-            <span class="__text">Checkbox</span>
-        </label>
+        <section class="elements">
+            <h3>Radio</h3>
+            <label class="radio-label">
+                <input type="radio" name="someName2">
+                <span class="__text">Radio 1</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="someName2">
+                <span class="__text">라디오</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="someName2">
+                <span class="__text">Radio 2 <br> second line</span>
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="someName2">
+                <span class="__text">라디오 <br> 두 번째 라인</span>
+            </label>
+        </section>
 
         <!-- Add toggle animation -->
 
     </section>
+
+
 
     
 </body>
