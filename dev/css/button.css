@@ -31,11 +31,11 @@ h3:before {
   vertical-align: middle;
 }
 
-section {
+.section {
   margin: 1rem 0 3rem;
 }
 
-.elements {
+.samples {
   margin: 0.625rem 0;
   padding: 1.25rem;
   border: solid 1px #ccc;

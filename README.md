@@ -40,3 +40,9 @@
 -   font
 -   vertical middle
 -   css prefix
+-   lists
+-   cards
+-   modal, alert
+-   tabs
+-   accordion
+-   zoom
