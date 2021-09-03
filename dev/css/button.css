@@ -19,6 +19,10 @@ h3 {
   color: #333;
 }
 
+h3:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
 h3:before {
   content: "";
   display: inline-block;
@@ -44,11 +48,13 @@ h3:before {
 }
 
 .buttons .button {
-  display: inline-block;
-  min-width: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
   min-height: 36px;
   box-sizing: border-box;
-  padding: 5px 20px 7px;
+  padding: 5px 12px 7px;
   border-radius: 4px;
   border: solid 1px transparent;
   font-size: 14px;
@@ -65,9 +71,17 @@ h3:before {
   cursor: pointer;
 }
 
+.buttons .button:enabled svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
 .buttons .button:enabled:hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
+}
+
+.buttons .button:enabled:hover svg {
+  fill: rgba(0, 0, 0, 0.65);
 }
 
 .buttons .button:enabled:active {
@@ -75,10 +89,32 @@ h3:before {
   background-color: rgba(0, 0, 255, 0.15);
 }
 
+.buttons .button:enabled:active svg {
+  fill: rgba(0, 0, 0, 0.7);
+}
+
 .buttons .button:disabled {
   border-color: rgba(0, 0, 255, 0.05);
   background-color: rgba(0, 0, 255, 0.02);
   color: rgba(0, 0, 0, 0.3);
+}
+
+.buttons .button:disabled svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.buttons .button .__icon {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+}
+
+.buttons .button .__icon:first-child {
+  margin-right: 2px;
+}
+
+.buttons .button .__text + .__icon {
+  margin-left: 2px;
 }
 
 .buttons a.button {
@@ -94,6 +130,10 @@ h3:before {
   pointer-events: none;
 }
 
+.buttons a.button[aria-disabled="true"] svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
 .buttons a.button:not([aria-disabled="true"]) {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
@@ -101,14 +141,26 @@ h3:before {
   cursor: pointer;
 }
 
+.buttons a.button:not([aria-disabled="true"]) svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
 .buttons a.button:not([aria-disabled="true"]):hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
 }
 
+.buttons a.button:not([aria-disabled="true"]):hover svg {
+  fill: rgba(0, 0, 0, 0.65);
+}
+
 .buttons a.button:not([aria-disabled="true"]):active {
   border-color: rgba(0, 0, 255, 0.2);
   background-color: rgba(0, 0, 255, 0.15);
+}
+
+.buttons a.button:not([aria-disabled="true"]):active svg {
+  fill: rgba(0, 0, 0, 0.7);
 }
 
 .togglable .__text {

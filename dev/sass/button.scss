@@ -24,6 +24,9 @@ h3 {
     margin: 0 0 1rem;
     font-weight: 500;
     color: #333;
+    &:not(:first-child) {
+        margin-top: 1.5rem;
+    }
     &:before {
         content: "";
         display: inline-block;
@@ -59,27 +62,41 @@ h3 {
         background-color: color(0.05);
         color: fontColor(0.9);
         cursor: pointer;
+        svg {
+            fill: fontColor(0.6);
+        }
         &:hover {
             border-color: color(0.15);
             background-color: color(0.1);
+            svg {
+                fill: fontColor(0.65);
+            }
         }
         &:active {
             border-color: color(0.2);
             background-color: color(0.15);
+            svg {
+                fill: fontColor(0.7);
+            }
         }
     }
     @mixin disabled {
         border-color: color(0.05);
         background-color: color(0.02);
         color: fontColor(0.3);
+        svg {
+            fill: fontColor(0.3);
+        }
     }
 
     .button {
-        display: inline-block;
-        min-width: 70px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
         min-height: 36px;
         box-sizing: border-box;
-        padding: 5px 20px 7px;
+        padding: 5px 12px 7px;
         border-radius: 4px;
         border: solid 1px transparent;
         font-size: 14px;
@@ -90,6 +107,23 @@ h3 {
         }
         &:disabled {
             @include disabled;
+        }
+
+        .__icon {
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            &:first-child {
+                margin-right: 2px;
+            }
+            svg {
+                // width: 100%;
+                // height: 100%;
+            }
+        }
+
+        .__text + .__icon {
+            margin-left: 2px;
         }
 
         // for display

@@ -46,3 +46,4 @@
 -   tabs
 -   accordion
 -   zoom
+-   icons
