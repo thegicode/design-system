@@ -12,7 +12,7 @@
     <section class="section buttons">
         <h2>Type</h2>
 
-        <section class="samples">
+        <div class="samples">
             <h3>Button</h3>
 
             <button type="button" class="button">
@@ -39,9 +39,9 @@
                 <span class="__text">버튼 <br>두 번째 라인</span>
             </button>
 
-        </section>
+        </div>
 
-        <section class="samples">
+        <div class="samples">
             <h3>A</h3>
             <a href="" role="button" class="button">
                 <span class="__text">A Link</span>
@@ -52,10 +52,30 @@
             <a href="" role="button" class="button" aria-disabled="true">
                 <span class="__text">Disabled</span>
             </a>
-        </section>
+        </div>
+
+        <div class="samples">
+            <h3>role = button</h3>
+            <div tabindex="0" role="button" class="button" aria-disabled="false">
+                <span class="__text">Role Button</span>
+            </div>
+            <div tabindex="0" role="button"  class="button" aria-disabled="true">
+                <span class="__text">Disabled</span>
+            </div>
+            <div tabindex="0" role="button"  class="button" aria-pressed="false">
+                <span class="__text">Unpressed</span>
+            </div>
+            <div tabindex="0" role="button"  class="button" aria-pressed="true">
+                <span class="__text">Pressed</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section buttons">
+        <h2>With Icon</h2>
 
 
-        <section class="samples">
+        <div class="samples">
             <h3>Icon | Button  </h3>
 
             <button type="button" class="button">
@@ -105,52 +125,52 @@
             </a>
 
 
-        </section>
+        </div>
 
     </section>
 
     <section class="section togglable">
         <h2>Togglable</h2>
 
-        <section class="samples">
+        <div class="samples">
             <h3>Checkbox</h3>
-            <label class="checkbox-label">
+            <label>
                 <input type="checkbox" name="someName1">
                 <span class="__text">Checkbox</span>
             </label>
-            <label class="checkbox-label">
+            <label>
                 <input type="checkbox" name="someName1">
                 <span class="__text">체크박스</span>
             </label>
-            <label class="checkbox-label">
+            <label>
                 <input type="checkbox" name="someName1">
                 <span class="__text">Checkbox <br> second line</span>
             </label>
-            <label class="checkbox-label">
+            <label>
                 <input type="checkbox" name="someName1">
                 <span class="__text">체크박스 <br> 두번째 라인</span>
             </label>
-        </section>
+        </div>
 
-        <section class="samples">
+        <div class="samples">
             <h3>Radio</h3>
-            <label class="radio-label">
+            <label>
                 <input type="radio" name="someName2">
                 <span class="__text">Radio 1</span>
             </label>
-            <label class="radio-label">
+            <label>
                 <input type="radio" name="someName2">
                 <span class="__text">라디오</span>
             </label>
-            <label class="radio-label">
+            <label>
                 <input type="radio" name="someName2">
                 <span class="__text">Radio 2 <br> second line</span>
             </label>
-            <label class="radio-label">
+            <label>
                 <input type="radio" name="someName2">
                 <span class="__text">라디오 <br> 두 번째 라인</span>
             </label>
-        </section>
+        </div>
 
         <!-- Add Only Icon -->
         <!-- Add toggle animation -->

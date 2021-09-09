@@ -88,6 +88,18 @@ h3 {
             fill: fontColor(0.3);
         }
     }
+    @mixin pressed {
+        border-color: color(0.3);
+        background-color: color(0.3);
+        &:hover {
+            border-color: color(0.35);
+            background-color: color(0.35);
+        }
+        &:active {
+            border-color: color(0.4);
+            background-color: color(0.4);
+        }
+    }
 
     .button {
         display: inline-flex;
@@ -142,6 +154,21 @@ h3 {
             @include enabled;
         }
     }
+    div.button {
+        user-select: none;
+
+        &:not([aria-disabled="true"]) {
+            @include enabled;
+        }
+        &[aria-disabled="true"] {
+            @include disabled;
+            pointer-events: none;
+        }
+        &[aria-pressed="true"] {
+            @include pressed;
+            // pointer-events: none;
+        }
+    }
 }
 
 .togglable {
@@ -171,8 +198,8 @@ h3 {
     }
     input[type="checkbox"],
     input[type="radio"] {
-        position: absolute;
-        top: 0;
+        position: fixed;
+        top: -10000rem;
         opacity: 0;
         &:checked + .__text {
             border-color: checkedColor(0.9);

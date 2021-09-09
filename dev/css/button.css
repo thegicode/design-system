@@ -163,6 +163,65 @@ h3:before {
   fill: rgba(0, 0, 0, 0.7);
 }
 
+.buttons div.button {
+  user-select: none;
+}
+
+.buttons div.button:not([aria-disabled="true"]) {
+  border-color: rgba(0, 0, 255, 0.1);
+  background-color: rgba(0, 0, 255, 0.05);
+  color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.buttons div.button:not([aria-disabled="true"]) svg {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+.buttons div.button:not([aria-disabled="true"]):hover {
+  border-color: rgba(0, 0, 255, 0.15);
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.buttons div.button:not([aria-disabled="true"]):hover svg {
+  fill: rgba(0, 0, 0, 0.65);
+}
+
+.buttons div.button:not([aria-disabled="true"]):active {
+  border-color: rgba(0, 0, 255, 0.2);
+  background-color: rgba(0, 0, 255, 0.15);
+}
+
+.buttons div.button:not([aria-disabled="true"]):active svg {
+  fill: rgba(0, 0, 0, 0.7);
+}
+
+.buttons div.button[aria-disabled="true"] {
+  border-color: rgba(0, 0, 255, 0.05);
+  background-color: rgba(0, 0, 255, 0.02);
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.buttons div.button[aria-disabled="true"] svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.buttons div.button[aria-pressed="true"] {
+  border-color: rgba(0, 0, 255, 0.3);
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.buttons div.button[aria-pressed="true"]:hover {
+  border-color: rgba(0, 0, 255, 0.35);
+  background-color: rgba(0, 0, 255, 0.35);
+}
+
+.buttons div.button[aria-pressed="true"]:active {
+  border-color: rgba(0, 0, 255, 0.4);
+  background-color: rgba(0, 0, 255, 0.4);
+}
+
 .togglable .__text {
   display: inline-block;
   min-width: 70px;
@@ -184,8 +243,8 @@ h3:before {
 
 .togglable input[type="checkbox"],
 .togglable input[type="radio"] {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: -10000rem;
   opacity: 0;
 }
 
