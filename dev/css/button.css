@@ -233,6 +233,10 @@ h3:before {
   fill: rgba(255, 255, 255, 0.9);
 }
 
+.togglable label {
+  position: relative;
+}
+
 .togglable .__text {
   display: inline-block;
   min-width: 70px;
@@ -254,8 +258,8 @@ h3:before {
 
 .togglable input[type="checkbox"],
 .togglable input[type="radio"] {
-  position: fixed;
-  top: -10000rem;
+  position: absolute;
+  top: 0;
   opacity: 0;
 }
 

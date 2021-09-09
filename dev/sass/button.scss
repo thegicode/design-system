@@ -187,6 +187,10 @@ h3 {
         @return rgba(155, 59, 167, $opacity);
     }
 
+    label {
+        position: relative;
+    }
+
     .__text {
         display: inline-block;
         min-width: 70px;
@@ -209,8 +213,8 @@ h3 {
     }
     input[type="checkbox"],
     input[type="radio"] {
-        position: fixed;
-        top: -10000rem;
+        position: absolute;
+        top: 0;
         opacity: 0;
         &:checked + .__text {
             border-color: checkedColor(0.9);
