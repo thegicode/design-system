@@ -51,7 +51,7 @@ h3:before {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 60px;
+  min-width: 45px;
   min-height: 36px;
   box-sizing: border-box;
   padding: 5px 12px 7px;
@@ -104,17 +104,15 @@ h3:before {
 }
 
 .buttons .button .__icon {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
+  display: inline-flex;
 }
 
-.buttons .button .__icon:first-child {
-  margin-right: 2px;
+.buttons .button .__icon:not(:only-child):first-child {
+  margin-right: 5px;
 }
 
 .buttons .button .__text + .__icon {
-  margin-left: 2px;
+  margin-left: 5px;
 }
 
 .buttons a.button {
@@ -208,18 +206,31 @@ h3:before {
 }
 
 .buttons div.button[aria-pressed="true"] {
-  border-color: rgba(0, 0, 255, 0.3);
-  background-color: rgba(0, 0, 255, 0.3);
+  border-color: rgba(0, 0, 255, 0.7);
+  background-color: rgba(0, 0, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.buttons div.button[aria-pressed="true"] svg {
+  fill: rgba(255, 255, 255, 0.9);
 }
 
 .buttons div.button[aria-pressed="true"]:hover {
-  border-color: rgba(0, 0, 255, 0.35);
-  background-color: rgba(0, 0, 255, 0.35);
+  border-color: rgba(0, 0, 255, 0.8);
+  background-color: rgba(0, 0, 255, 0.8);
+}
+
+.buttons div.button[aria-pressed="true"]:hover svg {
+  fill: rgba(255, 255, 255, 0.9);
 }
 
 .buttons div.button[aria-pressed="true"]:active {
-  border-color: rgba(0, 0, 255, 0.4);
-  background-color: rgba(0, 0, 255, 0.4);
+  border-color: rgba(0, 0, 255, 0.9);
+  background-color: rgba(0, 0, 255, 0.9);
+}
+
+.buttons div.button[aria-pressed="true"]:active svg {
+  fill: rgba(255, 255, 255, 0.9);
 }
 
 .togglable .__text {
@@ -272,3 +283,5 @@ h3:before {
     margin: 2rem auto;
   }
 }
+
+/*# sourceMappingURL=button.css.map */

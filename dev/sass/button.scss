@@ -4,6 +4,9 @@
 @function fontColor($opacity) {
     @return rgba(0, 0, 0, $opacity);
 }
+@function fontColor2($opacity) {
+    @return rgba(255, 255, 255, $opacity);
+}
 
 body {
     margin: 1rem;
@@ -89,15 +92,25 @@ h3 {
         }
     }
     @mixin pressed {
-        border-color: color(0.3);
-        background-color: color(0.3);
+        border-color: color(0.7);
+        background-color: color(0.7);
+        color: fontColor2(0.9);
+        svg {
+            fill: fontColor2(0.9);
+        }
         &:hover {
-            border-color: color(0.35);
-            background-color: color(0.35);
+            border-color: color(0.8);
+            background-color: color(0.8);
+            svg {
+                fill: fontColor2(0.9);
+            }
         }
         &:active {
-            border-color: color(0.4);
-            background-color: color(0.4);
+            border-color: color(0.9);
+            background-color: color(0.9);
+            svg {
+                fill: fontColor2(0.9);
+            }
         }
     }
 
@@ -105,7 +118,7 @@ h3 {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-width: 60px;
+        min-width: 45px;
         min-height: 36px;
         box-sizing: border-box;
         padding: 5px 12px 7px;
@@ -122,11 +135,9 @@ h3 {
         }
 
         .__icon {
-            display: inline-block;
-            width: 19px;
-            height: 19px;
-            &:first-child {
-                margin-right: 2px;
+            display: inline-flex;
+            &:not(:only-child):first-child {
+                margin-right: 5px;
             }
             svg {
                 // width: 100%;
@@ -135,7 +146,7 @@ h3 {
         }
 
         .__text + .__icon {
-            margin-left: 2px;
+            margin-left: 5px;
         }
 
         // for display
