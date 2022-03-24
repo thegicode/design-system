@@ -3,7 +3,7 @@
 }
 
 .modal {
-  --space: 15px;
+  --space: 16px;
   position: absolute;
   top: 0;
   right: 0;
@@ -12,6 +12,7 @@
   z-index: 1000;
   align-items: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal:not([hidden]) {
@@ -19,86 +20,80 @@
 }
 
 .modal-container {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-width: 60%;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80%;
+  max-height: 80%;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  border-radius: 6px;
-  border: solid 1px #ccc;
   background-color: #fff;
 }
 
 .modal-header {
   flex: none;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
   padding: var(--space);
-  border-bottom: 1px solid #e5e5e5;
 }
 
-.modal-header .button-close {
-  border-radius: 5px;
+.modal-button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
   border: none;
   background-color: transparent;
 }
 
-.modal-header .button-close:hover {
+.modal-button-close:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-subText {
+  font-size: 12px;
+  color: #666;
 }
 
 .modal-title {
   margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .modal-content {
   overflow: auto;
   padding: var(--space);
+  color: #535353;
 }
 
 .modal-footer {
   flex: none;
   overflow: hidden;
   display: flex;
+  gap: 1px;
+  margin-top: 8px;
+  background-color: #e5e5e5;
 }
 
-.modal-footer button {
+.modal-button {
   flex: 1;
   height: 50px;
   padding: 0;
-  border: 1px solid rgba(0, 100, 200, 0.5);
-  background-color: rgba(0, 100, 200, 0.5);
+  border: none;
+  background-color: rgba(100, 100, 255, 0.7);
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #fff;
+  outline-width: 2px;
+  outline-offset: -2px;
 }
 
-.backdrop {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.5);
+.modal-button:hover {
+  background-color: rgba(100, 100, 255, 0.8);
 }
 
-.backdrop:not([hidden]) {
-  display: block;
-}
-
-.modal-content h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 1.1;
-}
-
-.modal-content p {
-  margin: 0 0 10px;
-  font-size: 14px;
-  line-height: 1.5;
+.modal-button:focus {
+  background-color: rgba(100, 100, 255, 0.9);
 }
 
 /*# sourceMappingURL=modal.css.map */
