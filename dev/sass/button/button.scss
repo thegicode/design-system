@@ -8,58 +8,14 @@
     @return rgba(255, 255, 255, $opacity);
 }
 
-body {
-    margin: 1rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+button {
+  cursor: pointer;
+  &:focus {
+    outline-width: 2px;
+  }
 }
 
-h1 {
-    font-weight: 500;
-}
-
-h2 {
-    margin-top: 0;
-    font-weight: 500;
-    color: #333;
-}
-
-h3 {
-    margin: 0 0 1rem;
-    font-weight: 500;
-    color: #333;
-    &:not(:first-child) {
-        margin-top: 1.5rem;
-    }
-    &:before {
-        content: "";
-        display: inline-block;
-        width: 10px;
-        height: 5px;
-        margin-right: 7px;
-        margin-top: -1px;
-        background-color: rgba(124, 252, 0, 0.5);
-        background-image: -webkit-linear-gradient(
-            top,
-            rgba(124, 252, 0, 1) 10%,
-            rgba(124, 252, 0, 0) 70%
-        );
-        vertical-align: middle;
-    }
-}
-
-.section {
-    margin: 1rem 0 3rem;
-}
-
-.samples {
-    margin: 0.625rem 0;
-    padding: 1.25rem;
-    border: solid 1px #ccc;
-    border-radius: 4.2px;
-    background-clip: padding-box;
-}
-
-.buttons {
+// .buttons {
     @mixin enabled {
         border-color: color(0.1);
         background-color: color(0.05);
@@ -180,7 +136,7 @@ h3 {
             // pointer-events: none;
         }
     }
-}
+// }
 
 .togglable {
     @function checkedColor($opacity) {

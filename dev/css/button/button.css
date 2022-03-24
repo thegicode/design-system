@@ -1,53 +1,12 @@
-body {
-  margin: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+button {
+  cursor: pointer;
 }
 
-h1 {
-  font-weight: 500;
+button:focus {
+  outline-width: 2px;
 }
 
-h2 {
-  margin-top: 0;
-  font-weight: 500;
-  color: #333;
-}
-
-h3 {
-  margin: 0 0 1rem;
-  font-weight: 500;
-  color: #333;
-}
-
-h3:not(:first-child) {
-  margin-top: 1.5rem;
-}
-
-h3:before {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 5px;
-  margin-right: 7px;
-  margin-top: -1px;
-  background-color: rgba(124, 252, 0, 0.5);
-  background-image: -webkit-linear-gradient(top, lawngreen 10%, rgba(124, 252, 0, 0) 70%);
-  vertical-align: middle;
-}
-
-.section {
-  margin: 1rem 0 3rem;
-}
-
-.samples {
-  margin: 0.625rem 0;
-  padding: 1.25rem;
-  border: solid 1px #ccc;
-  border-radius: 4.2px;
-  background-clip: padding-box;
-}
-
-.buttons .button {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -64,172 +23,172 @@ h3:before {
   vertical-align: top;
 }
 
-.buttons .button:enabled {
+.button:enabled {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
   color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
-.buttons .button:enabled svg {
+.button:enabled svg {
   fill: rgba(0, 0, 0, 0.6);
 }
 
-.buttons .button:enabled:hover {
+.button:enabled:hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
 }
 
-.buttons .button:enabled:hover svg {
+.button:enabled:hover svg {
   fill: rgba(0, 0, 0, 0.65);
 }
 
-.buttons .button:enabled:active {
+.button:enabled:active {
   border-color: rgba(0, 0, 255, 0.2);
   background-color: rgba(0, 0, 255, 0.15);
 }
 
-.buttons .button:enabled:active svg {
+.button:enabled:active svg {
   fill: rgba(0, 0, 0, 0.7);
 }
 
-.buttons .button:disabled {
+.button:disabled {
   border-color: rgba(0, 0, 255, 0.05);
   background-color: rgba(0, 0, 255, 0.02);
   color: rgba(0, 0, 0, 0.3);
 }
 
-.buttons .button:disabled svg {
+.button:disabled svg {
   fill: rgba(0, 0, 0, 0.3);
 }
 
-.buttons .button .__icon {
+.button .__icon {
   display: inline-flex;
 }
 
-.buttons .button .__icon:not(:only-child):first-child {
+.button .__icon:not(:only-child):first-child {
   margin-right: 5px;
 }
 
-.buttons .button .__text + .__icon {
+.button .__text + .__icon {
   margin-left: 5px;
 }
 
-.buttons a.button {
+a.button {
   padding-top: 7px;
   padding-bottom: 7px;
   text-decoration: none;
 }
 
-.buttons a.button[aria-disabled="true"] {
+a.button[aria-disabled="true"] {
   border-color: rgba(0, 0, 255, 0.05);
   background-color: rgba(0, 0, 255, 0.02);
   color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
 
-.buttons a.button[aria-disabled="true"] svg {
+a.button[aria-disabled="true"] svg {
   fill: rgba(0, 0, 0, 0.3);
 }
 
-.buttons a.button:not([aria-disabled="true"]) {
+a.button:not([aria-disabled="true"]) {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
   color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
-.buttons a.button:not([aria-disabled="true"]) svg {
+a.button:not([aria-disabled="true"]) svg {
   fill: rgba(0, 0, 0, 0.6);
 }
 
-.buttons a.button:not([aria-disabled="true"]):hover {
+a.button:not([aria-disabled="true"]):hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
 }
 
-.buttons a.button:not([aria-disabled="true"]):hover svg {
+a.button:not([aria-disabled="true"]):hover svg {
   fill: rgba(0, 0, 0, 0.65);
 }
 
-.buttons a.button:not([aria-disabled="true"]):active {
+a.button:not([aria-disabled="true"]):active {
   border-color: rgba(0, 0, 255, 0.2);
   background-color: rgba(0, 0, 255, 0.15);
 }
 
-.buttons a.button:not([aria-disabled="true"]):active svg {
+a.button:not([aria-disabled="true"]):active svg {
   fill: rgba(0, 0, 0, 0.7);
 }
 
-.buttons div.button {
+div.button {
   user-select: none;
 }
 
-.buttons div.button:not([aria-disabled="true"]) {
+div.button:not([aria-disabled="true"]) {
   border-color: rgba(0, 0, 255, 0.1);
   background-color: rgba(0, 0, 255, 0.05);
   color: rgba(0, 0, 0, 0.9);
   cursor: pointer;
 }
 
-.buttons div.button:not([aria-disabled="true"]) svg {
+div.button:not([aria-disabled="true"]) svg {
   fill: rgba(0, 0, 0, 0.6);
 }
 
-.buttons div.button:not([aria-disabled="true"]):hover {
+div.button:not([aria-disabled="true"]):hover {
   border-color: rgba(0, 0, 255, 0.15);
   background-color: rgba(0, 0, 255, 0.1);
 }
 
-.buttons div.button:not([aria-disabled="true"]):hover svg {
+div.button:not([aria-disabled="true"]):hover svg {
   fill: rgba(0, 0, 0, 0.65);
 }
 
-.buttons div.button:not([aria-disabled="true"]):active {
+div.button:not([aria-disabled="true"]):active {
   border-color: rgba(0, 0, 255, 0.2);
   background-color: rgba(0, 0, 255, 0.15);
 }
 
-.buttons div.button:not([aria-disabled="true"]):active svg {
+div.button:not([aria-disabled="true"]):active svg {
   fill: rgba(0, 0, 0, 0.7);
 }
 
-.buttons div.button[aria-disabled="true"] {
+div.button[aria-disabled="true"] {
   border-color: rgba(0, 0, 255, 0.05);
   background-color: rgba(0, 0, 255, 0.02);
   color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
 
-.buttons div.button[aria-disabled="true"] svg {
+div.button[aria-disabled="true"] svg {
   fill: rgba(0, 0, 0, 0.3);
 }
 
-.buttons div.button[aria-pressed="true"] {
+div.button[aria-pressed="true"] {
   border-color: rgba(0, 0, 255, 0.7);
   background-color: rgba(0, 0, 255, 0.7);
   color: rgba(255, 255, 255, 0.9);
 }
 
-.buttons div.button[aria-pressed="true"] svg {
+div.button[aria-pressed="true"] svg {
   fill: rgba(255, 255, 255, 0.9);
 }
 
-.buttons div.button[aria-pressed="true"]:hover {
+div.button[aria-pressed="true"]:hover {
   border-color: rgba(0, 0, 255, 0.8);
   background-color: rgba(0, 0, 255, 0.8);
 }
 
-.buttons div.button[aria-pressed="true"]:hover svg {
+div.button[aria-pressed="true"]:hover svg {
   fill: rgba(255, 255, 255, 0.9);
 }
 
-.buttons div.button[aria-pressed="true"]:active {
+div.button[aria-pressed="true"]:active {
   border-color: rgba(0, 0, 255, 0.9);
   background-color: rgba(0, 0, 255, 0.9);
 }
 
-.buttons div.button[aria-pressed="true"]:active svg {
+div.button[aria-pressed="true"]:active svg {
   fill: rgba(255, 255, 255, 0.9);
 }
 

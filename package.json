@@ -13,7 +13,6 @@
     "url": "https://github.com/thegicode/design-system/issues"
   },
   "homepage": "https://github.com/thegicode/design-system#readme",
-  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass --watch --output-style expanded dev/sass --output dev/css --source-map true",

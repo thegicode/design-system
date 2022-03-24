@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" type="text/css" href="../../css/button/button.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/modal/modal.css" />
+
+</head>
+<body>
+
+<div class="buttons">
+    <button type="button" class="button">
+        <span class="__text">Open Modal</span>
+    </button>
+</div>
+
+<div class="modal" id="modal"> 
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 class="modal-title">Modal Title</h3>
+            <button type="button" class="button-close" title="닫기">
+                <img src="../../assets/icon_close.svg">
+            </button>
+        </div>
+        <div class="modal-content">
+            <h4>Title in a modal</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Ut commodo at felis vitae facilisis. 
+                Cras volutpat fringilla nunc vitae hendrerit. 
+                Donec porta id augue quis sodales. 
+                Sed sit amet metus ornare, mattis sem at, dignissim arcu. Cras rhoncus ornare mollis. 
+                Ut tempor augue mi, sed luctus neque luctus non. 
+                Vestibulum mollis tristique blandit.</p>
+            <h4>Title in a modal another</h4>
+            <p>
+                Sed posuere, est at eleifend suscipit, erat ante pretium turpis, eget semper ex risus nec dolor. 
+                Etiam pellentesque nulla neque, ut ullamcorper purus facilisis at. 
+                Nam imperdiet arcu felis, eu placerat risus dapibus sit amet. 
+                Praesent at justo at lectus scelerisque mollis. 
+                Mauris molestie mattis tellus ut facilisis. 
+                Sed vel ligula ornare, posuere velit ornare, consectetur erat.</p>
+
+            <h4>Title in a modal another</h4>
+            <p>
+                Sed posuere, est at eleifend suscipit, erat ante pretium turpis, eget semper ex risus nec dolor. 
+                Etiam pellentesque nulla neque, ut ullamcorper purus facilisis at. 
+                Nam imperdiet arcu felis, eu placerat risus dapibus sit amet. 
+                Praesent at justo at lectus scelerisque mollis. 
+                Mauris molestie mattis tellus ut facilisis. 
+                Sed vel ligula ornare, posuere velit ornare, consectetur erat.
+            </p>
+            <h4>Title in a modal another</h4>
+            <p>
+                Sed posuere, est at eleifend suscipit, erat ante pretium turpis, eget semper ex risus nec dolor. 
+                Etiam pellentesque nulla neque, ut ullamcorper purus facilisis at. 
+                Nam imperdiet arcu felis, eu placerat risus dapibus sit amet. 
+                Praesent at justo at lectus scelerisque mollis. 
+                Mauris molestie mattis tellus ut facilisis. 
+                Sed vel ligula ornare, posuere velit ornare, consectetur erat.
+            </p>
+            <h4>Title in a modal another</h4>
+            <p>
+                Sed posuere, est at eleifend suscipit, erat ante pretium turpis, eget semper ex risus nec dolor. 
+                Etiam pellentesque nulla neque, ut ullamcorper purus facilisis at. 
+                Nam imperdiet arcu felis, eu placerat risus dapibus sit amet. 
+                Praesent at justo at lectus scelerisque mollis. 
+                Mauris molestie mattis tellus ut facilisis. 
+                Sed vel ligula ornare, posuere velit ornare, consectetur erat.
+            </p>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button">
+                <span class="__text">확인</span>
+            </button>
+            <button type="button">
+                <span class="__text">취소</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="backdrop" id="backdrop"></div>
+
+<script>
+    const modal = document.querySelector('#modal');
+    const backdrop = document.querySelector('#backdrop');
+    document.querySelector('button')
+        .addEventListener('click', () => {
+            modal.hidden = false;
+            backdrop.hidden = false;
+        });
+    modal.querySelectorAll('button')
+        .forEach( button => {
+            button.addEventListener('click', () => {
+                modal.hidden = true;
+                backdrop.hidden = true;
+            });
+        });
+        
+</script>
+
+</body>
+</html>
