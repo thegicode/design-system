@@ -19,6 +19,6 @@
     "css:build": "node-sass --output-style compressed src/sass --output build/css --source-map false"
   },
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   }
 }
