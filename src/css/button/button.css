@@ -234,17 +234,4 @@ div.button[aria-pressed="true"]:active svg {
   outline: solid 2px black;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    margin: 2rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body {
-    max-width: 1024px;
-    margin: 2rem auto;
-  }
-}
-
 /*# sourceMappingURL=button.css.map */
